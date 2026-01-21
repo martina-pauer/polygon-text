@@ -81,7 +81,7 @@ fn main()
 	// Convert String to u8
 	let edges : u8 = input.trim().parse().expect("Bad Type");
     // Creative Way of data validation: Use recursivity of main function
-	 if edges != 3
+	 if edges < 3
 	 {
 	    // Give message when the data is not valid and recall to the function
 	        println!("Must Be 3 or more edges");
@@ -95,7 +95,7 @@ fn main()
         // Step 4: Change line direction with (edges - 2) * 45deg
 	        let inclination : i8 = (edges.wrapping_sub(2)).wrapping_mul(45) as i8;
 	   // Step 5: Draw the line from next position
-	        line(inclination, 0, 1);
+	        line(inclination, 1, 0);
 	  // Step 6: Draw line with negative inclination in next position
 	        line(inclination.wrapping_mul(0 - 1), 1, 1);
 	 // Step 7: Repeat (edges - 3) times steps 5 and 6 with others position 
@@ -103,8 +103,8 @@ fn main()
 	        
 	        while times <= (edges - 3)
 	        {
-	                line(inclination, times + 1, times);
-	                line(inclination.wrapping_mul(0 - 1), times + 2, times);
+	                line(inclination, times, times + 1);
+	                line(inclination.wrapping_mul(0 - 1), times, times + 2);
 	                times = times + 1;
 	        }                     
 	 }   
