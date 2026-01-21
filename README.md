@@ -7,5 +7,5 @@ Get some fun with this big programming interest while the holiday isn't end yet,
 # 3) Draw 2D polygon base line
 # 4) Change line direction to make polygon shape
 # 5) Draw line in the next position with new inclination
-# 6) Draw line with opposite inclinatin in next position
+# 6) Draw line with opposite inclination in next position
 # 7) Repeat (edges - 3) times steps 5 and 6 with other positions until close the shape
