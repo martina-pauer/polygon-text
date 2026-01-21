@@ -75,14 +75,14 @@ while (edges < 3)
 // Step 4: Change edges direction for shape up polygon
     inclination = (edges - 2) * 45;
 // Step 5: Draw the line in the next position
-    line(inclination, 0, 1);    
+    line(inclination, 1, 0);    
 // Step 6: Draw line with opposite inclination in the next position
     line(-inclination, 1, 1);
 // Step 7: Repeat (edges - 3) times steps 5 and 6 with other positions        
     for (int8_t times = 1; times <= (edges - 3); times++)
     {
-        line(inclination, times + 1, times);
-        line(-inclination, times + 2, times);
+        line(inclination, times, times + 1);
+        line(-inclination, times, times + 2);
     }    
   // Restart the position for don't move terminal prompt by extra spaces  
     repeat('\r', 1);
