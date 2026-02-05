@@ -52,8 +52,6 @@ edges: int = int(input('Write 3 or more edges: '))
 
 while (edges < 3):
 	edges: int = int(input('\n3 or more: '))
-# Step 3: Draw base 2D polygon line
-line(0, 0, 0)
 # Step 4: Change edges direction for shaping the polygon
 inclination: int = (edges - 2) * 45
 # Step 5: Draw line with that direction and next position
@@ -64,3 +62,5 @@ line(-inclination, 1, 1)
 for times in range(1, edges - 2):
     line(inclination, times + 1, times)
     line(-inclination, times + 2, times)
+# Step 8: Draw base line	
+line(0, 0, 0)	
